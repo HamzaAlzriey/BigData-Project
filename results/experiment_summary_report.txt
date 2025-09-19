@@ -1,0 +1,75 @@
+# MovieLens Recommendation System Experiments - Statistical Summary
+================================================================================
+Generated on: 2025-09-19 18:33:34
+Experiment repetitions: 3 runs per configuration
+Statistical method: Median ± Standard Deviation
+
+## Performance Metrics (Median ± Std Dev)
+--------------------------------------------------
+
+### SVD (Cores: 1)
+Training Time: 0.0313 ± 0.0009 seconds
+Prediction Time: 0.0806 ± 0.0288 seconds
+RMSE: 0.9806 ± 0.0000
+MAE: 0.7677 ± 0.0005
+Precision@10: 0.0233
+Recall@10: 0.0213
+NDCG@10: 0.0302
+Speed-up: 1.0000x
+Efficiency: 1.0000
+
+### ALS (Cores: 1)
+Training Time: 8.0853 ± 0.9397 seconds
+Prediction Time: 0.0392 ± 0.0299 seconds
+RMSE: 1.6657 ± 0.0000
+MAE: 1.3526 ± 0.0000
+Precision@10: 0.1500
+Recall@10: 0.1200
+NDCG@10: 0.1800
+Speed-up: 0.0039x
+Efficiency: 0.0039
+
+### ALS (Cores: 2)
+Training Time: 4.1997 ± 0.1847 seconds
+Prediction Time: 0.0181 ± 0.0013 seconds
+RMSE: 1.6657 ± 0.0000
+MAE: 1.3526 ± 0.0000
+Precision@10: 0.1500
+Recall@10: 0.1200
+NDCG@10: 0.1800
+Speed-up: 0.0074x
+Efficiency: 0.0037
+
+### ALS (Cores: 4)
+Training Time: 2.9976 ± 0.2841 seconds
+Prediction Time: 0.0169 ± 0.0041 seconds
+RMSE: 1.6657 ± 0.0000
+MAE: 1.3526 ± 0.0000
+Precision@10: 0.1500
+Recall@10: 0.1200
+NDCG@10: 0.1800
+Speed-up: 0.0104x
+Efficiency: 0.0026
+
+### ALS (Cores: 8)
+Training Time: 2.1991 ± 0.1553 seconds
+Prediction Time: 0.0165 ± 0.0072 seconds
+RMSE: 1.6657 ± 0.0000
+MAE: 1.3526 ± 0.0000
+Precision@10: 0.1500
+Recall@10: 0.1200
+NDCG@10: 0.1800
+Speed-up: 0.0142x
+Efficiency: 0.0018
+
+## Key Findings
+--------------------
+Best RMSE: SVD with 0.9806
+Best Speed-up: 1.0000x with 1 cores
+
+## Statistical Notes
+--------------------
+- All results represent median values across 3 independent runs
+- Standard deviations indicate measurement variability
+- Different random seeds used for each run to ensure independence
+- K=10 used for all ranking metrics (Precision@10, Recall@10, NDCG@10)
